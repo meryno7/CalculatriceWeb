@@ -1,0 +1,94 @@
+
+body
+{
+    margin: 0%;
+}
+header
+{
+    height: 90px;
+    background-color: #8603cde2;
+    padding-top: 40px;
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    color: aliceblue;   
+    box-shadow: 0 0 10px;
+}
+
+.page
+{
+    background-color: aliceblue;
+    max-width: 900px;
+    min-height: 500px;
+    margin: auto;
+    padding: 85px;
+    padding-top: 10px;
+    box-shadow: 0 0 10px  ;
+    text-align: center;
+}
+
+.titre
+{
+    height: 90px;
+    margin: 3px;
+}
+
+form
+{
+    margin: 40px 0 20px 0;
+}
+
+label
+{
+    font-size: x-large;
+}
+
+input[type="text"]
+{
+	padding: 10px;
+	font-size: 20px;
+	margin-right: 20px;
+	border: 2px solid #ddd;
+	border-radius: 9px;
+}
+
+select
+{
+    padding: 10px;
+	font-size: 15px;
+	text-align: center;
+	border: 2px solid #ddd;
+	border-radius: 3px;
+}
+
+button
+{
+	color: #fff;
+	font-size: 20px;
+	font-weight: bold;
+	padding: 11px;
+	background-color: #02b8dd;
+	border-style: none;
+	border-radius: 3px;
+}
+
+.button :hover
+{
+	color:#fff;
+	background-color: #8f0808;
+}
+
+#box-resultat
+{
+    margin: 20px auto;
+    padding: 20px;
+    border: 2px solid #4CAF50;
+    background-color: #1de207;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 30px;
+    width: 400px;
+    text-align: center;
+    box-shadow: 0 0 10px  ;
+    display: none;
+}

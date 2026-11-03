@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="Devoir_groupe3.css">
+        <title>Devoir groupe 3</title>
+    </head>
+<body>
+    <header><bold>Mini Projet Group1</bold></header>
+    <p> </p>
+    <div class="page">
+    <div class="titre">
+        <p style="font-size: 50px; color: forestgreen;">Bienvenue sur la page web</p>
+        <hr>
+    </div>
+
+        <form>
+            <label for="nombre1">Nombre 1:</label>
+            <input id="nombre1" type="text" placeholder="Entrez un premier nombre">
+            <label for="nombre2"> Nombre 2:</label>
+            <input id="nombre2" type="text" placeholder="Entrez un deuxieme nombre">
+            
+            <p> </p>
+            <label for="operation">Choisir une operation : </label>
+
+            <select id="operation" name="operation">
+                <option value="addition">Addition (+)</option>
+                <option value="soustraction">Soustraction (-)</option>
+                <option value="multiplication">Multiplication (x)</option>
+                <option value="division">Division (:)</option>
+                <option value="modulo">Modulo (%)</option>
+            </select>
+            
+            <p>  </p>
+            <button type="button" onclick="calculer()">VALIDER</button>
+        </form>
+        
+        <p> <br> </p>
+        <div id="box-resultat">Le resultat va s'afficher ici</div>
+
+    </div>  
+    
+    <script>
+       function calculer() {
+        //ON RECUPERE LES VALEURS DES INPUTS
+        let n1 = Number(document.getElementById("nombre1").value);
+        let n2 = Number(document.getElementById("nombre2").value);
+        let operation = document.getElementById("operation").value;
+        let resultat;
+
+        switch  (operation) {
+         case "addition":
+         resultat = n1 + n2;   
+         break;
+
+         case "soustraction":
+         resultat = n1 - n2;
+         break;
+
+         case "multiplication":
+         resultat = n1 * n2;
+         break;
+
+
+         case "division":
+         if (n2 === 0){
+            resultat = "Division par zero impossible";
+         }
+         else {
+            resultat = n1/n2;
+         }
+         break;
+
+         case "modulo":
+         if (n2 === 0) {
+            resultat = "Modulo par zero impossible";
+         }
+         else{
+            resultat = n1 % n2;
+         }
+         break;
+
+        }
+    
+       let box = document.getElementById("box-resultat");
+       box.innerHTML = "Resultat = " + resultat;
+       box.style.display = "block";
+
+       } 
+    </script> 
+</body>
+</html>
